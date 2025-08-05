@@ -1,0 +1,70 @@
+    Prompt:
+
+I want a fully functional, risk-managed Forex trading bot written in Python that works with MetaTrader 5 (MT5) using its official MetaTrader5 package. Please include the following features in the script:
+✅ Base Trading Logic:
+
+    Trading Platform: MetaTrader 5 (with Python API).
+
+    Symbol: Default to EURUSD (but allow me to change it easily).
+
+    Timeframe: 5-minute chart (M5).
+
+    Indicators for Entry:
+
+        Use Simple Moving Average (SMA) with a 50-period window.
+
+        Use Relative Strength Index (RSI) with a 14-period window.
+
+        Buy Entry: When price > SMA and RSI < 30 (oversold).
+
+        Sell Entry: When price < SMA and RSI > 70 (overbought).
+
+✅ Risk Management:
+
+    Calculate lot size dynamically based on account balance and 1% risk per trade.
+
+    Use fixed Stop Loss (SL) and Take Profit (TP) in pips (default SL: 5 pips, TP: 10 pips).
+
+    Enforce a minimum lot size of 0.01.
+
+✅ Safety Controls:
+
+    Run continuously in a loop.
+
+    Check for trades every X minutes (e.g., every 5 minutes — should be adjustable).
+
+    Implement daily loss protection:
+
+        Track total realized losses (in account currency) from closed trades for the current day.
+
+        If total loss exceeds a defined threshold (e.g., $50), pause trading until the next day.
+
+        Reset daily loss counter at a specific hour (default: midnight).
+
+✅ Extras (Optional but Ideal):
+
+    Display logs after each iteration: time, action taken, daily loss, etc.
+
+    Print trade success/failure messages with order ticket or error code.
+
+    Include clear section headers for readability (like # === Trade Execution ===).
+
+    Shutdown MT5 cleanly on exit.
+
+✅ Output Expectation:
+
+A complete Python script that:
+
+    Can be run standalone.
+
+    Requires only MetaTrader5 and pandas installed.
+
+    Uses live MT5 account connection.
+
+    Includes all logic above in a single file.
+
+    Is clean, documented, and beginner-friendly.
+
+    Please include everything in one code block and provide tips or customization notes after the script if needed.
+
+Let me know if you'd like to adapt this to other indicators, longer-term timeframes, or different asset classes (e.g., indices, crypto).
